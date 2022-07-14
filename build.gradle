@@ -32,6 +32,19 @@ dependencies {
 	// Spring Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
+	// Spring JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// H2
+	runtimeOnly 'com.h2database:h2'
+
+	// lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+
+
+
 	// Lombok
 	implementation 'org.projectlombok:lombok:1.18.20'
 	annotationProcessor 'org.projectlombok:lombok:1.18.20'

@@ -26,7 +26,7 @@ public class Answer {
     private String content;
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "question_id")
+    @JoinColumn(name = "QUESTION_ID")
     Question question;
 
 }

@@ -1,4 +1,4 @@
-package com.example.interviewPrep.quiz.models;
+package com.example.interviewPrep.quiz.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -16,11 +16,9 @@ import static javax.persistence.FetchType.LAZY;
 @Entity
 public class Answer {
 
-    @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)", name = "answer_id")
-    private UUID id;
+    @Id @GeneratedValue
+    @Column(name = "ANSWER_ID")
+    private Long id;
 
     @Lob
     private String content;

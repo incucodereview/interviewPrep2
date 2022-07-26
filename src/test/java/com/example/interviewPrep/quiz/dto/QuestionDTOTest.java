@@ -1,20 +1,23 @@
 package com.example.interviewPrep.quiz.dto;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-class ProblemDTOTest {
+class QuestionDTOTest {
 
     @Test
+    @DisplayName("QuestionDTO 생성")
     void create(){
-        ProblemDTO problem = ProblemDTO.builder()
+        QuestionDTO question = QuestionDTO.builder()
                 .id(1L)
                 .title("problem1")
                 .build();
 
-        assertThat(problem.getId()).isEqualTo(1L);
-        assertThat(problem.getTitle()).isEqualTo("problem1");
+        assertThat(question.getId()).isEqualTo(1L);
+        assertThat(question.getTitle()).isEqualTo("problem1");
     }
+
 
 }

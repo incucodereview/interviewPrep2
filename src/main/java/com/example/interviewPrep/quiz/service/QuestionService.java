@@ -16,7 +16,6 @@ import java.util.Optional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-@Log4j2
 public class QuestionService {
 
     @Autowired

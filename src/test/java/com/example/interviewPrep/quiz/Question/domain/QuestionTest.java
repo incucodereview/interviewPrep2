@@ -1,5 +1,6 @@
-package com.example.interviewPrep.quiz.domain;
+package com.example.interviewPrep.quiz.Question.domain;
 
+import com.example.interviewPrep.quiz.domain.Question;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -42,9 +43,9 @@ class QuestionTest {
                 .type("java")
                 .build();
 
-        question.change("Spring Boot에 대해 설명해보세요", "java");
+        question.change("자바 ArrayList에 대해 설명해보세요", "java");
 
-        assertThat(question.getTitle()).isEqualTo("Spring Boot에 대해 설명해보세요");
+        assertThat(question.getTitle()).isEqualTo("자바 ArrayList에 대해 설명해보세요");
         assertThat(question.getType()).isEqualTo("java");
     }
 

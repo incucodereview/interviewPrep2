@@ -1,5 +1,6 @@
-package com.example.interviewPrep.quiz.controller;
+package com.example.interviewPrep.quiz.Question.controller;
 
+import com.example.interviewPrep.quiz.controller.QuestionController;
 import com.example.interviewPrep.quiz.dto.QuestionDTO;
 import com.example.interviewPrep.quiz.service.QuestionService;
 import com.fasterxml.jackson.databind.ObjectMapper;

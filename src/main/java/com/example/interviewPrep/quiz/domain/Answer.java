@@ -1,5 +1,9 @@
 package com.example.interviewPrep.quiz.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Column;
@@ -14,6 +18,10 @@ import java.util.UUID;
 import static javax.persistence.FetchType.LAZY;
 
 @Entity
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Answer {
 
     @Id @GeneratedValue
@@ -26,5 +34,9 @@ public class Answer {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "QUESTION_ID")
     Question question;
+
+    public void change(String content){
+        this.content = content;
+    }
 
 }

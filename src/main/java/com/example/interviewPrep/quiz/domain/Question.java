@@ -15,9 +15,8 @@ import javax.persistence.Id;
 public class Question {
 
     @Id @GeneratedValue
-    @Column(name = "QUESTION_ID")
+    @Column(name = "QUESTION_ID", insertable=false, updatable=false)
     private Long id;
-
     private String title;
     private String type;
 

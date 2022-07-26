@@ -36,7 +36,6 @@ public class QuestionService {
         Question question = findQuestionById(id);
 
         if(question == null){
-            log.error("Question is not found");
             throw new QuestionNotFoundException(id);
         }
 

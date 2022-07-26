@@ -4,6 +4,7 @@ import com.example.interviewPrep.quiz.domain.Question;
 import com.example.interviewPrep.quiz.dto.QuestionDTO;
 import com.example.interviewPrep.quiz.repository.QuestionRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,7 @@ public class QuestionServiceTest {
     }
 
     @Test
+    @DisplayName("새 Question 생성")
     void createQuestion() {
 
         question = Question.builder()
@@ -56,6 +58,7 @@ public class QuestionServiceTest {
     }
 
     @Test
+    @DisplayName("Question 업데이트")
     void updateQuestion(){
 
        Question question = questionService.createQuestion(questionDTO);
@@ -67,6 +70,7 @@ public class QuestionServiceTest {
 
 
     @Test
+    @DisplayName("Question 삭제")
     void deleteQuestion(){
 
         Question question = questionService.createQuestion(questionDTO);

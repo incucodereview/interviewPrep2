@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Builder
@@ -14,7 +15,9 @@ public class QuestionDTO {
 
     private Long id;
 
+    @NotNull
     private String title;
+    @NotNull
     private String type;
 
 }

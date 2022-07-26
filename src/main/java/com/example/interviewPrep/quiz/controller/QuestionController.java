@@ -20,12 +20,6 @@ public class QuestionController {
     @Autowired
     private final QuestionService questionService;
 
-    @GetMapping("/create")
-    public String test(Model model){
-        model.addAttribute("createTest", "이것은 Model로 가져온 값이다.");
-        return "createTest";
-    }
-
 
     @GetMapping("/{type}")
     public String getTest(Model model, @PathVariable String type){
@@ -46,9 +40,9 @@ public class QuestionController {
         return questionService.updateQuestion(id, questionDTO);
     }
 
-    @DeleteMapping("/delete")
-    public void delete(@RequestBody @Valid QuestionDTO questionDTO){
-        Long id = questionDTO.getId();
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id){
         questionService.deleteQuestion(id);
     }
 
